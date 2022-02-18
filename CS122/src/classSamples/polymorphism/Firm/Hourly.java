@@ -1,4 +1,5 @@
 package classSamples.polymorphism.Firm;//********************************************************************
+
 //  Hourly.java       Author: Lewis/Loftus
 //
 //  Represents an employee that gets paid by the hour.
@@ -45,5 +46,12 @@ public class Hourly extends Employee {
 		result += "\nCurrent hours: " + hoursWorked;
 
 		return result;
+	}
+
+	public double vacationDays() {
+		if (pay() > 500)
+			return 10;
+		else
+			return 0;
 	}
 }

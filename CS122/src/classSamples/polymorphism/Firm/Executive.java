@@ -1,4 +1,5 @@
 package classSamples.polymorphism.Firm;//********************************************************************
+
 //  Executive.java       Author: Lewis/Loftus
 //
 //  Represents an executive staff member, who can earn a bonus.
@@ -34,5 +35,9 @@ public class Executive extends Employee {
 		bonus = 0;
 
 		return payment;
+	}
+
+	public double vacationDays() {
+		return pay() / 100;
 	}
 }

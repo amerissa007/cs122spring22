@@ -1,4 +1,5 @@
 package classSamples.polymorphism.Firm;//********************************************************************
+
 //  StaffMember.java       Author: Lewis/Loftus
 //
 //  Represents a generic staff member.
@@ -26,7 +27,8 @@ abstract public class StaffMember {
 		String result = "Name: " + name + "\n";
 
 		result += "Address: " + address + "\n";
-		result += "Phone: " + phone;
+		result += "Phone: " + phone + "\n";
+		result += "Vacation Days: " + this.vacationDays();
 
 		return result;
 	}
@@ -36,4 +38,6 @@ abstract public class StaffMember {
 	// employee.
 	// -----------------------------------------------------------------
 	public abstract double pay();
+
+	public abstract double vacationDays();
 }
