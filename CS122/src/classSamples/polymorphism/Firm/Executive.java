@@ -40,4 +40,8 @@ public class Executive extends Employee {
 	public double vacationDays() {
 		return pay() / 100;
 	}
+	
+	public double vacation() {
+		return 14;
+	}
 }

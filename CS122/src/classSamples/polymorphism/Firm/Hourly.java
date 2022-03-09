@@ -54,4 +54,7 @@ public class Hourly extends Employee {
 		else
 			return 0;
 	}
+	public double vacation() {
+		return 14;
+	}
 }

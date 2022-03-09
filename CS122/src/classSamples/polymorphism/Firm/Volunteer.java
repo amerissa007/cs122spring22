@@ -28,4 +28,5 @@ public class Volunteer extends StaffMember {
 	public double vacationDays() {
 		return 0;
 	}
+
 }
