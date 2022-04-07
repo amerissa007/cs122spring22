@@ -9,6 +9,10 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import java.util.Random;
+
 
 //************************************************************************
 //  FontDemo.java       Author: Lewis/Loftus
@@ -17,15 +21,23 @@ import javafx.stage.Stage;
 //************************************************************************
 
 public class FontDemo extends Application {
+	Text text1;
 	// --------------------------------------------------------------------
 	// Displays three Text objects using various font styles.
 	// --------------------------------------------------------------------
 	public void start(Stage primaryStage) {
+		
+		Button change = new Button("Change Font");
+		change.setOnAction((event)-> {
+			text1.setFont(Font.font("American Typewriter", FontWeight.BOLD, FontPosture.ITALIC, 14));
+		});
+		
+		
 		Font font1 = new Font("Courier", 36);
 		Font font2 = Font.font("Times", FontWeight.BOLD, FontPosture.ITALIC, 28);
 		Font font3 = Font.font("Arial", FontPosture.ITALIC, 14);
 
-		Text text1 = new Text(30, 55, "Dream Big");
+		text1 = new Text(30, 55, "Dream Big");
 		text1.setFont(font1);
 		text1.setUnderline(true);
 
@@ -37,7 +49,7 @@ public class FontDemo extends Application {
 				"In theory, there is no difference " + "between theory\nand practice, but in practice there is.");
 		text3.setFont(font3);
 
-		Group root = new Group(text1, text2, text3);
+		Group root = new Group(text1, text2, text3, change);
 		Scene scene = new Scene(root, 400, 200, Color.LIGHTCYAN);
 
 		primaryStage.setTitle("Font Demo");
